@@ -1,4 +1,4 @@
-me: example
+name: example
 on: push
 jobs:
   greeting:
