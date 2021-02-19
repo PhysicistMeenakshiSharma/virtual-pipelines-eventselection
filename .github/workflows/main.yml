@@ -12,5 +12,5 @@ jobs:
       - name: build
         run: |
           COMPILER=$(root-config --cxx)
-          $COMPILER -g -O3 -Wall -Eextra -Wpedantic$-o skim skim.cxx
+          $COMPILER -g -O3 -Wall -Wextra -Wpedantic -o skim skim.cxx $FLAGS 
 
