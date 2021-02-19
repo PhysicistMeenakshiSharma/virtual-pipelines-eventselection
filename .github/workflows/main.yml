@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo hello world
+
   build_skim:
     needs: greeting
     runs-on: ubuntu-latest
@@ -20,7 +21,7 @@ jobs:
         run: |
           COMPILER=$(root-config --cxx)
           FLAGS=$(root-config --cflags --libs)
-          $COMPILER -g -O3 -Wall -Wextra -Wpedantic -o skim skim.cxx $FLAGS    -
+          $COMPILER -g -O3 -Wall -Wextra -Wpedantic -o skim skim.cxx $FLAGS
   skim:
     needs: build_skim
     runs-on: ubuntu-latest
