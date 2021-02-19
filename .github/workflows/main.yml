@@ -1,15 +1,8 @@
-me: example
+name: example
 on: push
 jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-    - run: echo hello world
-  build_skim:
-    runs-on: ubuntu-latest
-    steps:
-      - name: build
-        run: |
-          COMPILER=$(root-config --cxx)
-          $COMPILER -g -O3 -Wall -Eextra -Wpedantic$-o skim skim.cx
-
+      - run: echo hello world
+ 
